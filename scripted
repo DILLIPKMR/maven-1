@@ -1,0 +1,11 @@
+node('master') 
+{
+    stage('continuousdownload') 
+    {
+        git 'https://github.com/DILLIPKMR/maven.git'
+    }
+    stage('continiousbuild') 
+    {
+        sh 'mvn package'
+    }
+}
